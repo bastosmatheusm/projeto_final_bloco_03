@@ -6,6 +6,11 @@ import DeletarCategoria from './pages/categorias/deletarcategoria/DeletarCategor
 import ListaCategorias from './components/categorias/listacategorias/ListaCategorias'
 import FormCategoria from './pages/categorias/formcategorias/FormCategoria'
 
+// produtos
+import ListaProdutos from './components/produtos/listaprodutos/ListaProdutos'
+import FormProduto from './pages/produtos/formproduto/FormProduto'
+import DeletarProduto from './pages/produtos/deletarproduto/DeletarProduto'
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,10 +19,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+
           <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/cadastrarcategoria" element={<FormCategoria />} />
           <Route path="/editarcategoria/:id" element={<FormCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+
+          <Route path="/produtos" element={<ListaProdutos />} />
+          <Route path="/cadastrarproduto" element={<FormProduto />} />
+          <Route path="/editarproduto/:id" element={<FormProduto />} />
+          <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
         </Routes>
         <Footer />
       </div>
